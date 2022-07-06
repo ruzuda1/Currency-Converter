@@ -2,7 +2,7 @@ const InputV = (props) => {
   return (
     <div className="InputGroup">
       <input
-        type="text"
+        type="number"
         value={props.amount}
         onChange={(e) => props.onAmountChange(e.target.value)}
       />
