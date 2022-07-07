@@ -17,22 +17,22 @@ const MainPage = () => {
       });
   }, []);
 
-  const handleAmount1Change = (amount1) => {
+  const amount1Change = (amount1) => {
     setAmount2(((amount1 * currency2) / currency1).toFixed(2));
     setAmount1(amount1);
   };
 
-  const handleCurrency1Change = (currency1) => {
+  const currency1Change = (currency1) => {
     setAmount2(((amount1 * currency2) / currency1).toFixed(2));
     setCurrency1(currency1);
   };
 
-  const handleAmount2Change = (amount2) => {
+  const amount2Change = (amount2) => {
     setAmount1(((amount2 * currency1) / currency2).toFixed(2));
     setAmount2(amount2);
   };
 
-  const handleCurrency2Change = (currency2) => {
+  const currency2Change = (currency2) => {
     setAmount1(((amount2 * currency1) / currency2).toFixed(2));
     setCurrency2(currency2);
   };
@@ -42,20 +42,20 @@ const MainPage = () => {
       <h3>Value</h3>
       <div>
         <InputV
-          currencies={rates}
+          valCurrencies={rates}
           amount={amount1}
           currency={currency1}
-          onAmountChange={handleAmount1Change}
-          onCurrentlyChange={handleCurrency1Change}
+          amountChange={amount1Change}
+          currentlyChange={currency1Change}
         />
       </div>
       <div>
         <InputV
-          currencies={rates}
+          valCurrencies={rates}
           amount={amount2}
           currency={currency2}
-          onAmountChange={handleAmount2Change}
-          onCurrentlyChange={handleCurrency2Change}
+          amountChange={amount2Change}
+          currentlyChange={currency2Change}
         />
       </div>
     </div>

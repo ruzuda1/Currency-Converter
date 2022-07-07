@@ -4,13 +4,13 @@ const InputV = (props) => {
       <input
         type="number"
         value={props.amount}
-        onChange={(e) => props.onAmountChange(e.target.value)}
+        onChange={(e) => props.amountChange(e.target.value)}
       />
       <select
         value={props.currency}
-        onChange={(e) => props.onCurrentlyChange(e.target.value)}
+        onChange={(e) => props.currentlyChange(e.target.value)}
       >
-        {props.currencies.map((cur) => (
+        {props.valCurrencies.map((cur) => (
           <option value={cur.rate}>
             {cur.cc} - {cur.txt}
           </option>
